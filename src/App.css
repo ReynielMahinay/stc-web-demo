@@ -1,0 +1,127 @@
+/* #bg_grad {
+  background-image: linear-gradient(
+    to bottom,
+    #285fa5,
+    #2765ac,
+    #266bb3,
+    #2572b9,
+    #2378c0,
+    #1784c9,
+    #0891d2,
+    #009dd9,
+    #00b1dd,
+    #00c2d0,
+    #00d1b2,
+    #2edc8a
+  );
+} */
+:root {
+  --swiper-theme-color: white;
+}
+
+#max-size {
+  width: 1280px;
+  height: 100vh;
+}
+
+#bg_grad {
+  background: rgb(159, 191, 246);
+  background: radial-gradient(
+    circle,
+    rgba(159, 191, 246, 1) 0%,
+    rgba(32, 129, 201, 1) 16%,
+    rgba(40, 95, 165, 1) 39%
+  );
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+.mySwiper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.swiper-slide {
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mySwiper {
+  --swiper-pagination-color: var(--theme-color);
+  --theme-color: white;
+}
+
+.spiral_shape {
+  background-color: #47d3ff;
+  opacity: 0.8;
+  background-image: radial-gradient(circle at center center, #474bff, #47d3ff),
+    repeating-radial-gradient(
+      circle at center center,
+      #474bff,
+      #474bff,
+      8px,
+      transparent 16px,
+      transparent 8px
+    );
+  background-blend-mode: multiply;
+}
+
+.half_spiral {
+  /* Existing styles for the spiral pattern */
+  background-image: repeating-radial-gradient(
+      circle at 0 0,
+      transparent 0,
+      #47d3ff 48px
+    ),
+    repeating-linear-gradient(#474bff, #474bff);
+  background-color: #47d3ff;
+
+  /* Animation properties for background movement */
+  animation: moveSpiral 4s linear infinite;
+  /* Ensure background is larger than element */
+}
+
+@keyframes moveSpiral {
+  from {
+    background-position: 0px 0px;
+  }
+  to {
+    background-position: 100px 100px; /* Adjust values for desired spiral path */
+  }
+}
+
+.hero_spiral {
+  background-image: repeating-radial-gradient(
+      circle at 0 0,
+      transparent 0,
+      #47d3ff 32px
+    ),
+    repeating-linear-gradient(#474bff, #474bff);
+  background-color: #47d3ff;
+}
+
+.image_spiral {
+  background-image: radial-gradient(circle at center center, #474bff, #47d3ff),
+    repeating-radial-gradient(
+      circle at center center,
+      #474bff,
+      #00ffd0,
+      32px,
+      transparent 64px,
+      transparent 32px
+    );
+  background-blend-mode: multiply;
+  background-color: #47d3ff;
+}
+
+.text_grad {
+  background: #547cff;
+  background: linear-gradient(to right, #547cff 0%, #5e6eff 50%, #08c8cf 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
